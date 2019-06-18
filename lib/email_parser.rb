@@ -4,8 +4,6 @@
 # or whitespace (' ').
 
 class EmailParser
-  attr_accessor :emails
-  @@all = []
 
   def initialize(emails)
     @emails = emails
@@ -16,4 +14,5 @@ class EmailParser
     updatedList = newList.split(",")
     updatedList.uniq
   end
+  
 end
