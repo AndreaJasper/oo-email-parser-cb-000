@@ -7,13 +7,13 @@ class EmailParser
   attr_accessor :emails
   @@all = []
 
-  def initialize
-    @@all << self
-    parse
+  def initialize(emails)
+    @emails = emails
   end
 
-  def self.all
-    @@all
+  def parse
+    newList = @emails.gsub(/,*\s+/,",")
+    updatedList = newList.split(",")
+    updatedList.uniq
   end
-
 end
