@@ -14,5 +14,5 @@ class EmailParser
     updatedList = newList.split(",")
     updatedList.uniq
   end
-  
+
 end
